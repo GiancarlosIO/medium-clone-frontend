@@ -1,0 +1,24 @@
+{
+  "name": "medium-clone",
+  "version": "1.0.0",
+  "description": "A simple medium clone",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GiancarlosIO/medium-clone-frontend.git"
+  },
+  "keywords": [
+    "medium",
+    "react",
+    "apollo"
+  ],
+  "author": "Giancarlos Isasi <giancarlos.isasi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GiancarlosIO/medium-clone-frontend/issues"
+  },
+  "homepage": "https://github.com/GiancarlosIO/medium-clone-frontend#readme"
+}
