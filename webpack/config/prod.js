@@ -13,7 +13,7 @@ module.exports = require('./base')({
   // In production, we skip all hot-reloading stuff
   entry: [
     // require.resolve('react-app-polyfill/ie11'),
-    path.join(process.cwd(), 'src/index.js'),
+    path.join(process.cwd(), 'src/index.tsx'),
   ],
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
@@ -73,7 +73,7 @@ module.exports = require('./base')({
   plugins: [
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
-      template: 'app/index.html',
+      template: 'templates/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
