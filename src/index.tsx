@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <h1 id="asdasdasd">A simple medium clone</h1>
-      <p>Hello world</p>
+      <p>Hello world from netlify</p>
     </div>
   );
 }
