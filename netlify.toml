@@ -1,0 +1,9 @@
+[build]
+  base = '.'
+  publish = "dist"
+  command = "npm run build"
+[[redirects]]
+# server a static index1.html to all pages
+  from = "/*"
+  to = "/index.html"
+  status = 200

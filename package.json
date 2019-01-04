@@ -6,8 +6,8 @@
   "scripts": {
     "test": "test",
     "build": "cross-env NODE_ENV=production webpack --config webpack/config/prod.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "start": "cross-env NODE_ENV=development node webpack/server",
     "start:production": "npm run build && npm run start:prod",
+    "start": "cross-env NODE_ENV=development node webpack/server",
     "start:prod": "cross-env NODE_ENV=production node webpack/server"
   },
   "repository": {

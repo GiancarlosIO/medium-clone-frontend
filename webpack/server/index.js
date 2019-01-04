@@ -1,4 +1,4 @@
-/* eslint consistent-return:0 import/order:0 */
+/* eslint-disable consistent-return, import/order, import/no-extraneous-dependencies, typescript/no-var-requires */
 
 const express = require('express');
 const logger = require('./logger');
@@ -6,8 +6,10 @@ const logger = require('./logger');
 const argv = require('./argv');
 const port = require('./port');
 const setup = require('./middlewares/frontendMiddleware');
+
 const isDev = process.env.NODE_ENV !== 'production';
 const { resolve } = require('path');
+
 const app = express();
 
 // const ngrok =
