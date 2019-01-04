@@ -1,11 +1,16 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-const App = () => (
-  <h1>A simple medium clone</h1>
-);
+const App = () => {
+  return (
+    <div>
+      <h1 id="asdasdasd">A simple medium clone</h1>
+      <p>Hello world</p>
+    </div>
+  );
+}
 
 ReactDOM.render(
   <App />,
-  document.querySelector('#app'),
-);
+  document.querySelector('#app')
+)
