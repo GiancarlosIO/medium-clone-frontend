@@ -10,7 +10,15 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "Babel Javascript"
+    "Babel Javascript",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
   ],
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,

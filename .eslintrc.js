@@ -32,16 +32,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error', prettierOptions],
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "printWidth": 80,
-        "jsxBracketSameLine": false,
-        "trailingComma": "all",
-        "arrowParens": "avoid"
-      }
-    ],
     "no-param-reassign": [
       2,
       {
@@ -75,7 +65,9 @@ module.exports = {
       {
         "extensions": [
           ".js",
-          ".jsx"
+          ".jsx",
+          '.ts',
+          '.tsx'
         ]
       }
     ],

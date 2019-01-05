@@ -1,16 +1,16 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { createGlobalStyle } from 'styled-components';
+import Main from './main';
 
-const App = () => {
-  return (
-    <div>
-      <h1 id="asdasdasd">A simple medium clone</h1>
-      <p>Hello world from netlify</p>
-    </div>
-  );
-}
+const Font = createGlobalStyle`
+  font-family: 'Poppins', sans-serif;
+`;
 
 ReactDOM.render(
-  <App />,
-  document.querySelector('#app')
-)
+  <div>
+    <Main />
+    <Font />
+  </div>,
+  document.querySelector('#app'),
+);
