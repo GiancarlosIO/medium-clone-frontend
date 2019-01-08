@@ -53,7 +53,9 @@ const Header: React.SFC<{}> = (): React.ReactElement<{}> => {
     setModal({
       open: true,
       view:
-        modal.view === LOGIN_VIEW.SIGNUP ? LOGIN_VIEW.LOGIN : LOGIN_VIEW.SIGNUP,
+        modal.view === LOGIN_VIEW.SIGNUP
+          ? LOGIN_VIEW.SIGNIN
+          : LOGIN_VIEW.SIGNUP,
     });
 
   return (
@@ -63,7 +65,7 @@ const Header: React.SFC<{}> = (): React.ReactElement<{}> => {
           <span dangerouslySetInnerHTML={{ __html: Logo }} />
         </a>
 
-        <Button href="/login" onClick={openModal(LOGIN_VIEW.LOGIN)}>
+        <Button href="/login" onClick={openModal(LOGIN_VIEW.SIGNIN)}>
           Login
         </Button>
 

@@ -9,6 +9,19 @@ const Font = createGlobalStyle`
   html, body {
     font-family: 'Poppins', sans-serif;
   }
+  @-webkit-keyframes autofill {
+    to {
+        color: #666;
+        background: white;
+    }
+  }
+  input:-webkit-autofill {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #454545 !important;
+}
 `;
 
 ReactDOM.render(

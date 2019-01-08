@@ -2,6 +2,7 @@ import * as React from 'react';
 import Modal from 'src/Shared/Modal';
 import styled from 'src/Theme/styled-components';
 import { LOGIN_VIEW } from 'src/Constants';
+import LoginForm from './LoginForm';
 
 const ModalBody = styled.div`
   position: relative;
@@ -14,7 +15,7 @@ const ModalBody = styled.div`
 
 interface LoginModalProps {
   onClose(): void;
-  view: 'SIGNUP' | 'LOGIN';
+  view: 'SIGNUP' | 'SIGNIN';
   toggleLoginModal(): void;
 }
 
@@ -36,7 +37,7 @@ const LoginModal: React.SFC<LoginModalProps> = ({
   const loginCopy: string = `
     Sign in to access your personalized homepage, follow authors and topics you love, and clap for stories that matter to you.
   `;
-  const isLogin = view === LOGIN_VIEW.LOGIN;
+  const isLogin = view === LOGIN_VIEW.SIGNIN;
 
   return (
     <Modal onClose={onClose} backgroundColor={isLogin ? '#D7EFEE' : '#E8F3EC'}>
@@ -44,8 +45,9 @@ const LoginModal: React.SFC<LoginModalProps> = ({
         <h1>{isLogin ? 'Welcome back.' : 'Join Medium.'}</h1>
         <div style={{ fontWeight: 300 }}>
           <p>{isLogin ? loginCopy : signupCopy}</p>
+          <LoginForm view={view} />
           <div style={{ fontSize: 14 }}>
-            {view === LOGIN_VIEW.LOGIN ? (
+            {view === LOGIN_VIEW.SIGNIN ? (
               <p>
                 No account?{' '}
                 <ToggleButton type="button" onClick={toggleLoginModal}>
