@@ -83,7 +83,7 @@ module.exports = {
     "react/no-array-index-key": 1,
     "jsx-a11y/no-static-element-interactions": "off",
     "react/sort-comp": [
-      2,
+      0,
       {
         "order": [
           "static-methods",

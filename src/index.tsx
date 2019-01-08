@@ -1,16 +1,22 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from './Theme/styled-components';
+import Theme from './Theme';
 import Main from './main';
 
 const Font = createGlobalStyle`
-  font-family: 'Poppins', sans-serif;
+  html, body {
+    font-family: 'Poppins', sans-serif;
+  }
 `;
 
 ReactDOM.render(
-  <div>
-    <Main />
-    <Font />
-  </div>,
+  <ThemeProvider theme={Theme}>
+    <div>
+      <Font />
+      <Main />
+    </div>
+  </ThemeProvider>,
   document.querySelector('#app'),
 );
